@@ -1,0 +1,27 @@
+{
+  "name": "test08-10-15-46",
+  "version": "1.0.0",
+  "description": "A test project",
+  "engines": {
+    "node": ">=8.2.0"
+  },
+  "main": "/website/app.js",
+  "scripts": {
+    "start": "node server",
+    "deploy": "gcloud app deploy",
+    "browser": "gcloud app browse"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyborabora/GitHubTestAlexis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heyborabora/GitHubTestAlexis/issues"
+  },
+  "homepage": "https://github.com/heyborabora/GitHubTestAlexis#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
