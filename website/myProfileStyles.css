@@ -1,0 +1,38 @@
+.profile {
+    width: 800px;
+    margin: auto;
+}
+
+body {
+    font-family: 'Times New Roman';
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+hr {
+    width: 500px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: forestgreen;
+}
+
+img {
+    margin: auto;
+    display: block;
+    width: 225px;
+    height: 375px;
+}
+
+#homework {
+    font-style: italic;
+    text-align: center;
+}
