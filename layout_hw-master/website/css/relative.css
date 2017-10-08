@@ -1,0 +1,160 @@
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    color: white;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+body {
+    line-height: 1;
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+li,
+a {
+    list-style: none;
+    display: inline;
+    margin: 3px;
+}
+
+header,
+nav,
+article,
+aside,
+footer {
+    position: relative;
+}
+
+header {
+    background-color: blue;
+    height: 40px;
+}
+
+nav {
+    background-color: green;
+    height: 30px;
+    width: 800px;
+    text-align: left;
+}
+
+article {
+    background-color: pink;
+    width: 67%;
+    height: 200px;
+}
+
+section {
+    background-color: brown;
+    height: 60px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+aside {
+    background-color: cyan;
+    width: 33%;
+    height: 200px;
+    left: 67%;
+    top: -200px;
+}
+
+footer {
+    background-color: green;
+    top: -200px;
+    height: 30px;
+}
