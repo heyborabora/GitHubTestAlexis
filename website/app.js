@@ -1,24 +1,38 @@
-let num = prompt('Please enter a number between 2 and 10:');
-let numCount = parseInt(num, 10);
+const message = prompt('Choose an option: ' +
+    '\n' + '1: Show messages' +
+    '\n' + '2: Add a message' +
+    '\n' + '3: Delete a message' +
+    '\n' + '0: Quit');
 
-for (let i = 1;
-    (numCount / 2 ** i) > 0.000001; i++) {
-    lastNum = i + 1;
-}
-//console.log(lastNum);
 
-function getNum() {
-    if (numCount <= 1 || numCount >= 11) {
-        document.getElementById("warning").innerHTML = "Your input is " + numCount + ". The valid input number is between 2 and 10. Please reload this page and try again.";
-    } else {
-        document.getElementById("msg").innerHTML = "Your input number is " + numCount;
-        document.getElementById("msg2").innerHTML = "The number of times to divide " + numCount + " by 2 to get a value less than one millionth is " + lastNum
+let arrMessage = ['message 01', 'message 02', 'message 03', 'message 04', 'message 05'];
+
+let chooseOne = function() {
+    for (let i = 0; i < arrMessage.length; i++) {
+        document.getElementById('output').innerHTML += (i + 1) + ': ' + (arrMessage[i]) + '<br/>';
     }
-}
-getNum();
+};
 
+let chooseZero = function() {
+    document.getElementById('output').innerHTML = 'Good Bye';
+};
 
-let arr = ['*', '**', '***', '****', '*****', '******', '*******', '********', '*********', '**********']
-for (let i = numCount; i >= 1; i--) {
-    if (numCount > 10) {} else { document.write('<br>' + arr[i - 1]) }
-}
+let chooseOthers = function() {
+    document.getElementById('output').innerHTML = 'Please refresh and select a correct command';
+};
+
+if (message === '1') {
+    chooseOne();
+} else if (message === '2') {
+    let popupTwo = prompt('Enter a new message:');
+    arrMessage.push(popupTwo);
+    chooseOne();
+} else if (message === '3') {
+    let popupThree = prompt('Enter the message index (between 1 and ' + arrMessage.length + ')');
+    arrMessage.splice(popupThree - 1, 1);
+    chooseOne();
+} else if (message === '0') {
+    chooseZero();
+} else {
+    chooseOthers();
+};
