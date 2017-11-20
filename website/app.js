@@ -1,38 +1,38 @@
-const message = prompt('Choose an option: ' +
-    '\n' + '1: Show messages' +
-    '\n' + '2: Add a message' +
-    '\n' + '3: Delete a message' +
-    '\n' + '0: Quit');
+const list = document.querySelector('#candidate-list ul');
 
-
-let arrMessage = ['message 01', 'message 02', 'message 03', 'message 04', 'message 05'];
-
-let chooseOne = function() {
-    for (let i = 0; i < arrMessage.length; i++) {
-        document.getElementById('output').innerHTML += (i + 1) + ': ' + (arrMessage[i]) + '<br/>';
+list.addEventListener('click', function(e) {
+    if (e.target.className == 'delete') {
+        const li = e.target.parentElement;
+        list.removeChild(li);
     }
-};
+});
 
-let chooseZero = function() {
-    document.getElementById('output').innerHTML = 'Good Bye';
-};
+const addForm = document.forms['create-candidates'];
 
-let chooseOthers = function() {
-    document.getElementById('output').innerHTML = 'Please refresh and select a correct command';
-};
+addForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const value = addForm.querySelector("input[type='text']").value;
 
-if (message === '1') {
-    chooseOne();
-} else if (message === '2') {
-    let popupTwo = prompt('Enter a new message:');
-    arrMessage.push(popupTwo);
-    chooseOne();
-} else if (message === '3') {
-    let popupThree = prompt('Enter the message index (between 1 and ' + arrMessage.length + ')');
-    arrMessage.splice(popupThree - 1, 1);
-    chooseOne();
-} else if (message === '0') {
-    chooseZero();
-} else {
-    chooseOthers();
-};
+    const li = document.createElement("li");
+    const candidateName = document.createElement("span");
+    const deleteBtn = document.createElement("span");
+    const likeBtn = document.createElement("span");
+    const count = document.createElement("span");
+
+    deleteBtn.textContent = 'delete';
+    likeBtn.textContent = 'like';
+    count.textContent = 0;
+    candidateName.textContent = value;
+
+    candidateName.classList.add('name');
+    deleteBtn.classList.add('delete');
+    likeBtn.classList.add('like');
+    count.classList.add('count');
+
+    li.appendChild(candidateName);
+    li.appendChild(deleteBtn);
+    li.appendChild(likeBtn);
+    li.appendChild(count);
+    list.appendChild(li);
+
+})

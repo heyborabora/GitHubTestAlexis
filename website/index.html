@@ -5,18 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Website Template</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="styles.css" rel="stylesheet" />
+
+    <title>Candidate List_HW6</title>
 </head>
 
 <body>
-    <h2>A Sample Website</h2>
+    <div id="wrapper">
+        <header>
+            <div id="page-banner">
+                <h1 class="title">Create Candidate</h1>
+                <form id="create-candidates">
+                    <input type="text" placeholder="Name" />
+                    <button class="createBttn">Create</button>
+                </form>
+            </div>
+        </header>
 
-    <div id="output-subject">The program output</div>
-    <p id="output"></p>
+        <div id="candidate-list">
+            <h2 class="title">Candidate List</h2>
+            <ul>
+                <li>
+                    <span class="name">Peter Parker</span>
+                    <span class="delete">delete</span>
+                    <span class="like">like</span>
+                    <span class="count">100</span>
 
-    <script src="app.js">
-    </script>
+                </li>
+                <li>
+                    <span class="name">Tony Stark</span>
+                    <span class="delete">delete</span>
+                    <span class="like">like</span>
+                    <span class="count">101</span>
+                </li>
+                <li>
+                    <span class="name">Dash</span>
+                    <span class="delete">delete</span>
+                    <span class="like">like</span>
+                    <span class="count">102</span>
+                </li>
+                <li>
+                    <span class="name">Clark Kent</span>
+                    <span class="delete">delete</span>
+                    <span class="like">like</span>
+                    <span class="count">103</span>
+                </li>
+                <li>
+                    <span class="name">Wonder Woman</span>
+                    <span class="delete">delete</span>
+                    <span class="like">like</span>
+                    <span class="count">104</span>
+                </li>
+                <li>
+                    <span class="name">Atomic Blond</span>
+                    <span class="delete">delete</span>
+                    <span class="like">like</span>
+                    <span class="count">105</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
