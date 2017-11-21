@@ -4,6 +4,11 @@ list.addEventListener('click', function(e) {
     if (e.target.className == 'delete') {
         const li = e.target.parentElement;
         list.removeChild(li);
+    } else if (e.target.className == 'like') {
+        const li = e.target.parentElement;
+        let like = li.getElementsByClassName("count")[0];
+        likePlusOne = parseInt(like.innerHTML) + 1;
+        like.innerHTML = likePlusOne;
     }
 });
 
