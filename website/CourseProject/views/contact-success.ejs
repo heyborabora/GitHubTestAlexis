@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact</title>
+
+</head>
+
+<body>
+    <div class=container>
+        <nav>
+            <% include partials/nav.ejs %>
+        </nav>
+        <div class=profile_content>
+            </br>
+        </div>
+
+        <p class="header">Contact
+        </p>
+        <div id="contact-form">
+            <strong>Name: </strong>
+            <%= data.name %>
+                </br>
+                </br>
+                <strong>Email: </strong>
+                <%= data.email %>
+                    </br>
+                    </br>
+                    <strong>Phone: </strong>
+                    <%= data.phone %>
+                        </br>
+                        </br>
+        </div>
+        <p class="header">
+        </p>
+
+    </div>
+</body>
+
+</html>
